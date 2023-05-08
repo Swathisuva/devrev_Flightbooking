@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Add flight</title>
+    <link rel="stylesheet" href="signup.css">
+    <link rel="stylesheet" href="userlanding.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  font-family: "lato", sans-serif;
+}
+
+/* .signupFrm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+} */
+.signupFrm {
+    
+    background-image: url('https://www.studentuniverse.com/news/wp-content/uploads/2021/01/Airplane-Wing-in-Flight-from-window-sunset-sky-484616224_3936x2624-1-2048x1365.jpeg'); /* replace flight.jpg with the filename and path of your flight image */
+
+    background-size: cover;
+    background-position: center;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+
+
+.form {
+  background-color: white;
+  width: 400px;
+  border-radius: 8px;
+  padding: 20px 40px;
+  box-shadow: 0 10px 25px rgba(92, 99, 105, .2);
+  margin-top: 80px;
+}
+
+.title {
+  font-size: 50px;
+  margin-bottom: 50px;
+}
+
+.inputContainer {
+  position: relative;
+  height: 45px;
+  width: 90%;
+  margin-bottom: 17px;
+}
+
+.input {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  border: 1px solid #DADCE0;
+  border-radius: 7px;
+  font-size: 16px;
+  padding: 0 20px;
+  outline: none;
+  background: none;
+  z-index: 1;
+}
+
+
+.label {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  padding: 0 4px;
+  background-color: white;
+  color: #DADCE0;
+  font-size: 16px;
+  transition: 0.5s;
+  z-index: 0;
+}
+
+::placeholder {
+  color: transparent;
+}
+
+.submitBtn {
+  display: block;
+  margin-left: 20px;
+  padding: 15px 30px;
+  border: none;
+  background-color: rgb(234, 156, 54);
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 30px;
+  text-align: center  ;
+}
+
+.submitBtn:hover {
+  background-color: #9867C5;
+  transform: translateY(-2px);
+}
+.input:focus + .label {
+  top: -7px;
+  left: 3px;
+  z-index: 10;
+  font-size: 14px;
+  font-weight: 600;
+  color: purple;
+}
+
+.input:not(:placeholder-shown)+ .label {
+  top: -7px;
+  left: 3px;
+  z-index: 10;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.input:focus {
+  border: 2px solid purple;
+}
+.navigation{
+    padding-top:30px;
+    padding-bottom:30px;
+    position:absolute;
+    top:0;
+    width:100%;
+    z-index:1;
+  }
+  
+  .navbar-right{
+    float:right;
+    padding-right:10%;
+  }
+  
+  .navbar-right a{
+    text-decoration:none;
+    padding:10px;
+    color: #fff;
+    font-family:Arial;
+    font-weight:900;
+  }
+  
+  .navbar-right a:hover{
+    text-decoration:underline;
+  }
+  .navbar-logo{
+    padding-left:10%;
+    font-family:Arial;
+    font-size:30px;
+    font-weight:bold;
+    text-decoration:none;
+    color:#fff; 
+  }
+  
+  .video-container {
+    z-index: -100;
+    width: 1545px;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+  }
+  
+  #video-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .portfolio-section{
+    margin-top:50%;
+  }
+  .tagline-left{
+    float:left;
+    width:50%;
+    text-align:center;
+  }
+  
+  .tagline-right{
+    float:right;
+    width:50%;
+    text-align:center;
+  }
+  
+  .tagline-video{
+    width:75%;
+  }
+  
+  .tagline-right-text{
+   position:absolute;
+   margin-top:9%;
+   text-align:center;
+   margin-left:17%;
+  font-family:Arial;
+   color:#fff;
+    width:290px;
+    font-size:40px;
+  }
+  
+  .tagline-left-text{
+   position:absolute;
+   margin-top:9%;
+   text-align:center;
+   margin-left:11%;
+  font-family:Arial;
+   color:#fff;
+    width:375px;
+    font-size:40px;
+  }
+  
+  .dropdown {
+    float: left;
+    overflow: hidden;
+  }
+  
+  .dropdown .dropbtn {
+    font-weight:900;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 17px;
+    background-color: inherit;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+  }
+  
+  .navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: inherit;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: inherit;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    float: none;
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+   
+  }
+  
+  .dropdown-content a:hover {
+    background-color:inherit;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+    </style>
+</head>
+
+<body>
+    <nav class="navigation">
+        <a href="userlanding.html" class="navbar-logo">StarAirWays</a>
+        <div class="navbar-right">
+          <a href="#">About</a>
+          
+          <a href="#">Contact</a>
+         
+          <a href="booktickets">Book Tickets</a>
+
+          <a href="mybookings">My Bookings</a>
+
+          <a href="userlanding">LogOut</a>
+         
+        </div>
+      </nav>
+    <div class="signupFrm">
+        <div class="wrapper">
+            <form class="form" method="post" action="http://localhost:4002/booktickets">
+                <h1 class="title">Book Flights</h1>
+
+                <div class="inputContainer">
+                    <input type="text"  class="input" id="username" placeholder="username" name="username">
+                    <label for="" class="label">Username</label>
+                </div>
+
+                <div class="inputContainer">
+                    <input type="text"  class="input" id="mail1" placeholder="Mail" name="mail1">
+                    <label for="" class="label">Mail ID</label>
+                </div>
+
+
+                <div class="inputContainer">
+                    <label for="fname" class="label">Flight Name</label>
+                    <select id="fname" name="fname" class="input">
+                      <option value=""></option>
+                      <option value="Delta 123">Delta 123</option>
+                      <option value="United 456">United 456</option>
+                      <option value="American 789">American 789</option>
+                      <option value="Southwest 101">Southwest 101</option>
+                      <option value="JetBlue 234">JetBlue 234</option>
+                      <option value="Alaska 567">Alaska 567</option>
+                      <option value="Frontier 890">Frontier 890</option>
+                      <option value="Spirit 123">Spirit 123</option>
+                      <option value="Hawaiian 456">Hawaiian 456</option>
+                      <option value="Allegiant 789">Allegiant 789</option>
+                    </select>
+                  </div>
+
+
+
+                  <div class="inputContainer">
+                    <label for="fairlines" class="label">Airlines</label>
+                    <select id="fairlines" name="fairlines" class="input">
+                      <option value=""></option>
+                      <option value="Delta">Delta</option>
+                      <option value="American Airlines">American Airlines</option>
+                      <option value="United Airlines">United Airlines</option>
+                      <option value="Southwest Airlines">Southwest Airlines</option>
+                      <option value="JetBlue Airways">JetBlue Airways</option>
+                    </select>
+                  </div>
+                  
+                  <div class="inputContainer">
+                    <label for="fsource" class="label">Source</label>
+                    <select id="fsource" name="fsource" class="input">
+                      <option value=""></option>
+                      <option value="New York">New York</option>
+                      <option value="Los Angeles">Los Angeles</option>
+                      <option value="Chicago">Chicago</option>
+                      <option value="Atlanta">Atlanta</option>
+                      <option value="San Francisco">San Francisco</option>
+                    </select>
+                  </div>
+                  
+                  <div class="inputContainer">
+                    <label for="fdestination" class="label">Destination</label>
+                    <select id="fdestination" name="fdestination" class="input">
+                      <option value=""></option>
+                      <option value="London">London</option>
+                      <option value="Paris">Paris</option>
+                      <option value="Tokyo">Tokyo</option>
+                      <option value="Sydney">Sydney</option>
+                      <option value="Dubai">Dubai</option>
+                    </select>
+                  </div>
+                  
+                  <div class="inputContainer">
+                    <label for="fdtime" class="label">Departure Time</label>
+                    <select id="fdtime" name="fdtime" class="input">
+                      <option value=""></option>
+                      <option value="9:00 am">9:00 am</option>
+                      <option value="12:00 pm">12:00 pm</option>
+                      <option value="3:00 pm">3:00 pm</option>
+                      <option value="6:00 pm">6:00 pm</option>
+                      <option value="9:00 pm">9:00 pm</option>
+                    </select>
+                  </div>
+                  
+                  <div class="inputContainer">
+                    <label for="fatime" class="label">Arrival Time</label>
+                    <select id="fatime" name="fatime" class="input">
+                      <option value=""></option>
+                      <option value="12:00 pm">12:00 pm</option>
+                      <option value="3:00 pm">3:00 pm</option>
+                      <option value="6:00 pm">6:00 pm</option>
+                      <option value="9:00 pm">9:00 pm</option>
+                      <option value="12:00 am">12:00 am</option>
+                    </select>
+                  </div>
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+
+
+
+                <input type="submit" class="submitBtn" value="ADD">
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

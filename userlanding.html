@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="userlanding.css">
+<style>.navigation{
+  padding-top:30px;
+  padding-bottom:30px;
+  position:absolute;
+  top:0;
+  width:100%;
+  z-index:1;
+}
+
+.navbar-right{
+  float:right;
+  padding-right:10%;
+}
+
+.navbar-right a{
+  text-decoration:none;
+  padding:10px;
+  color: #fff;
+  font-family:Arial;
+  font-weight:900;
+}
+
+.navbar-right a:hover{
+  text-decoration:underline;
+}
+.navbar-logo{
+  padding-left:10%;
+  font-family:Arial;
+  font-size:30px;
+  font-weight:bold;
+  text-decoration:none;
+  color:#fff; 
+}
+
+.video-container {
+  z-index: -100;
+  width: 1545px;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+}
+
+#video-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.portfolio-section{
+  margin-top:50%;
+}
+.tagline-left{
+  float:left;
+  width:50%;
+  text-align:center;
+}
+
+.tagline-right{
+  float:right;
+  width:50%;
+  text-align:center;
+}
+
+.tagline-video{
+  width:75%;
+}
+
+.tagline-right-text{
+ position:absolute;
+ margin-top:9%;
+ text-align:center;
+ margin-left:17%;
+font-family:Arial;
+ color:#fff;
+  width:290px;
+  font-size:40px;
+}
+
+.tagline-left-text{
+ position:absolute;
+ margin-top:9%;
+ text-align:center;
+ margin-left:11%;
+font-family:Arial;
+ color:#fff;
+  width:375px;
+  font-size:40px;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-weight:900;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 17px;
+  background-color: inherit;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: inherit;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: inherit;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+ 
+}
+
+.dropdown-content a:hover {
+  background-color:inherit;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}</style>
+</head>
+<body>
+    <header>
+        <div class="header">
+          <nav class="navigation">
+            <a href="userlanding.html" class="navbar-logo">StarAirWays</a>
+            <div class="navbar-right">
+              <a href="#">About</a>
+              
+              <a href="#">Contact</a>
+              <a href="signup.html">SignUp</a>
+              <div class="dropdown">
+                <button class="dropbtn">LogIn
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content" >
+                  <a style="text-decoration: none;" href="userlogin.html">User Login</a>
+                  <a style="text-decoration: none;" href="adminlogin.html">Admin Login</a>
+                
+                </div>
+              </div> 
+            </div>
+          </nav>
+      
+          <div class="video-container">
+            <video autoplay loop muted id="video-bg">
+      
+              <source src="https://assets.mixkit.co/videos/preview/mixkit-pink-sunset-seen-from-a-plane-window-4204-large.mp4"  type="video/mp4">
+      
+            </video>
+          </div>
+        </div>
+      </header>
+      
+       
+    <!-- <video src="https://assets.mixkit.co/videos/preview/mixkit-pink-sunset-seen-from-a-plane-window-4204-large.mp4" autoplay loop playsinline muted width="1520px" height="auto"></video> -->
+
+
+
+<script>
+var video = document.getElementById("myVideo");
+var btn = document.getElementById("myBtn");
+
+function myFunction() {
+  if (video.paused) {
+    video.play();
+    btn.innerHTML = "Pause";
+  } else {
+    video.pause();
+    btn.innerHTML = "Play";
+  }
+}
+</script>
+
+</body>
+</html>
